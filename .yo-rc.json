@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "gitCompany": "",
+    "baseName": "jhipsterFiscalizacao",
+    "packageName": "br.ufpa.eas.detran",
+    "packageFolder": "br/ufpa/eas/detran",
+    "serverPort": 8080,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": true,
+    "nativeLanguage": "pt-br",
+    "languages": [
+      "fr",
+      "pt-br"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "5.5.0",
+    "jwtSecretKey": "YWZmMjM0M2QxYjk0ZDhmZTViMWNjZDk1NmZhNzU0OTg0OGJlNTFiNzNhZjA0YjExNjBmYWYwMDQ2ZGI2MDRiZmU1ZDQxOWE5NDc5MDdmZmRiYTU3YTFmZGYyMWU5MmQ2YzNmMGVkZTk3ODk5M2ZiYWU2NmQyZjRjZDg5YTZhYjg="
+  },
+  "git-provider": "GitHub",
+  "git-company": "jeffjras",
+  "repository-name": "jhipsterFiscalizacao"
+}
