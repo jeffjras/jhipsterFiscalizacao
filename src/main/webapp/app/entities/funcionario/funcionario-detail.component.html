@@ -1,0 +1,73 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="funcionario">
+            <h2><span jhiTranslate="jhipsterFiscalizacaoApp.funcionario.detail.title">Funcionario</span> {{funcionario.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.funcionario.nome">Nome</span></dt>
+                <dd>
+                    <span>{{funcionario.nome}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.funcionario.endereco">Endereco</span></dt>
+                <dd>
+                    <span>{{funcionario.endereco}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.funcionario.telefone">Telefone</span></dt>
+                <dd>
+                    <span>{{funcionario.telefone}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.funcionario.numVeiculoAbordado">Num Veiculo Abordado</span></dt>
+                <dd>
+                    <span>{{funcionario.numVeiculoAbordado}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.funcionario.numDocApreendido">Num Doc Apreendido</span></dt>
+                <dd>
+                    <span>{{funcionario.numDocApreendido}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.funcionario.supervisor">Supervisor</span></dt>
+                <dd>
+                    <div *ngIf="funcionario.supervisor">
+                        <a [routerLink]="['/funcionario', funcionario.supervisor?.id, 'view']">{{funcionario.supervisor?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.funcionario.chefe">Chefe</span></dt>
+                <dd>
+                    <div *ngIf="funcionario.chefe">
+                        <a [routerLink]="['/funcionario', funcionario.chefe?.id, 'view']">{{funcionario.chefe?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.funcionario.gerente">Gerente</span></dt>
+                <dd>
+                    <div *ngIf="funcionario.gerente">
+                        <a [routerLink]="['/funcionario', funcionario.gerente?.id, 'view']">{{funcionario.gerente?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.funcionario.departamento">Departamento</span></dt>
+                <dd>
+                    <div *ngIf="funcionario.departamento">
+                        <a [routerLink]="['/departamento', funcionario.departamento?.id, 'view']">{{funcionario.departamento?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.funcionario.cargo">Cargo</span></dt>
+                <dd>
+                    <div *ngIf="funcionario.cargo">
+                        <a [routerLink]="['/cargo', funcionario.cargo?.id, 'view']">{{funcionario.cargo?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/funcionario', funcionario.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

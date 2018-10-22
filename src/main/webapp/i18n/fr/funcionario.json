@@ -1,0 +1,31 @@
+
+{
+    "jhipsterFiscalizacaoApp": {
+        "funcionario" : {
+            "home": {
+                "title": "Funcionarios",
+                "createLabel": "Créer un nouveau Funcionario",
+                "createOrEditLabel": "Créer ou éditer un Funcionario"
+            },
+            "created": "Un nouveau Funcionario a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Funcionario avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Funcionario avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Funcionario {{ id }} ?"
+            },
+            "detail": {
+                "title": "Funcionario"
+            },
+            "nome": "Nome",
+            "endereco": "Endereco",
+            "telefone": "Telefone",
+            "numVeiculoAbordado": "Num Veiculo Abordado",
+            "numDocApreendido": "Num Doc Apreendido",
+            "supervisor": "Supervisor",
+            "chefe": "Chefe",
+            "gerente": "Gerente",
+            "departamento": "Departamento",
+            "cargo": "Cargo"
+        }
+    }
+}

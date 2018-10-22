@@ -1,0 +1,31 @@
+
+{
+    "jhipsterFiscalizacaoApp": {
+        "funcionario" : {
+            "home": {
+                "title": "Funcionarios",
+                "createLabel": "Criar novo Funcionario",
+                "createOrEditLabel": "Criar ou editar Funcionario"
+            },
+            "created": "Um novo Funcionario foi criado com o identificador {{ param }}",
+            "updated": "Um Funcionario foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Funcionario foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Funcionario {{ id }}?"
+            },
+            "detail": {
+                "title": "Funcionario"
+            },
+            "nome": "Nome",
+            "endereco": "Endereco",
+            "telefone": "Telefone",
+            "numVeiculoAbordado": "Num Veiculo Abordado",
+            "numDocApreendido": "Num Doc Apreendido",
+            "supervisor": "Supervisor",
+            "chefe": "Chefe",
+            "gerente": "Gerente",
+            "departamento": "Departamento",
+            "cargo": "Cargo"
+        }
+    }
+}

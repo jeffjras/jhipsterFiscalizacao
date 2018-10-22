@@ -1,0 +1,27 @@
+
+{
+    "jhipsterFiscalizacaoApp": {
+        "localizacao" : {
+            "home": {
+                "title": "Localizacaos",
+                "createLabel": "Criar novo Localizacao",
+                "createOrEditLabel": "Criar ou editar Localizacao"
+            },
+            "created": "Um novo Localizacao foi criado com o identificador {{ param }}",
+            "updated": "Um Localizacao foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Localizacao foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Localizacao {{ id }}?"
+            },
+            "detail": {
+                "title": "Localizacao"
+            },
+            "bairro": "Bairro",
+            "logradouro": "Logradouro",
+            "perimetro": "Perimetro",
+            "operacao": "Operacao",
+            "fiscalizacao": "Fiscalizacao",
+            "municipio": "Municipio"
+        }
+    }
+}

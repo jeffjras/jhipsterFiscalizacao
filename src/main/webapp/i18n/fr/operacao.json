@@ -1,0 +1,29 @@
+
+{
+    "jhipsterFiscalizacaoApp": {
+        "operacao" : {
+            "home": {
+                "title": "Operacaos",
+                "createLabel": "Créer un nouveau Operacao",
+                "createOrEditLabel": "Créer ou éditer un Operacao"
+            },
+            "created": "Un nouveau Operacao a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Operacao avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Operacao avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Operacao {{ id }} ?"
+            },
+            "detail": {
+                "title": "Operacao"
+            },
+            "data": "Data",
+            "status": "Status",
+            "fiscalizacoes": "Fiscalizacoes",
+            "locais": "Locais",
+            "equipamentos": "Equipamentos",
+            "departamentos": "Departamentos",
+            "veiculos": "Veiculos",
+            "orgao": "Orgao"
+        }
+    }
+}

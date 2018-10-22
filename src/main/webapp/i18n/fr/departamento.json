@@ -1,0 +1,24 @@
+
+{
+    "jhipsterFiscalizacaoApp": {
+        "departamento" : {
+            "home": {
+                "title": "Departamentos",
+                "createLabel": "Créer un nouveau Departamento",
+                "createOrEditLabel": "Créer ou éditer un Departamento"
+            },
+            "created": "Un nouveau Departamento a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Departamento avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Departamento avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Departamento {{ id }} ?"
+            },
+            "detail": {
+                "title": "Departamento"
+            },
+            "nome": "Nome",
+            "agentes": "Agentes",
+            "operacao": "Operacao"
+        }
+    }
+}

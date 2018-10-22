@@ -1,0 +1,13 @@
+{
+    "jhipsterFiscalizacaoApp": {
+        "TipoVeiculo" : {
+            "null": "",
+            "CARRO": "CARRO",
+            "MOTO": "MOTO",
+            "PICKUP": "PICKUP",
+            "CAMINHAO": "CAMINHAO",
+            "ONIBUS": "ONIBUS",
+            "TRICICLO": "TRICICLO"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+
+{
+    "jhipsterFiscalizacaoApp": {
+        "veiculo" : {
+            "home": {
+                "title": "Veiculos",
+                "createLabel": "Créer un nouveau Veiculo",
+                "createOrEditLabel": "Créer ou éditer un Veiculo"
+            },
+            "created": "Un nouveau Veiculo a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Veiculo avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Veiculo avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Veiculo {{ id }} ?"
+            },
+            "detail": {
+                "title": "Veiculo"
+            },
+            "marca": "Marca",
+            "modelo": "Modelo",
+            "placa": "Placa",
+            "chassi": "Chassi",
+            "ano": "Ano",
+            "tipo": "Tipo",
+            "fiscalizacao": "Fiscalizacao",
+            "operacao": "Operacao"
+        }
+    }
+}

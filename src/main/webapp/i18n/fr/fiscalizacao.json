@@ -1,0 +1,31 @@
+
+{
+    "jhipsterFiscalizacaoApp": {
+        "fiscalizacao" : {
+            "home": {
+                "title": "Fiscalizacaos",
+                "createLabel": "Créer un nouveau Fiscalizacao",
+                "createOrEditLabel": "Créer ou éditer un Fiscalizacao"
+            },
+            "created": "Un nouveau Fiscalizacao a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Fiscalizacao avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Fiscalizacao avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Fiscalizacao {{ id }} ?"
+            },
+            "detail": {
+                "title": "Fiscalizacao"
+            },
+            "dataInicio": "Data Inicio",
+            "dataFim": "Data Fim",
+            "dataRegistro": "Data Registro",
+            "observacao": "Observacao",
+            "situacao": "Situacao",
+            "documentacoes": "Documentacoes",
+            "locais": "Locais",
+            "condutores": "Condutores",
+            "veiculos": "Veiculos",
+            "operacao": "Operacao"
+        }
+    }
+}

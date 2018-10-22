@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-documentacao-heading" jhiTranslate="jhipsterFiscalizacaoApp.documentacao.home.createOrEditLabel">Create or edit a Documentacao</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!documentacao.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="documentacao.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.documentacao.tipo" for="field_tipo">Tipo</label>
+                    <select class="form-control" name="tipo" [(ngModel)]="documentacao.tipo" id="field_tipo" >
+                        <option value="CNH">{{'jhipsterFiscalizacaoApp.TipoDocumentacao.CNH' | translate}}</option>
+                        <option value="CRV">{{'jhipsterFiscalizacaoApp.TipoDocumentacao.CRV' | translate}}</option>
+                        <option value="CRLV">{{'jhipsterFiscalizacaoApp.TipoDocumentacao.CRLV' | translate}}</option>
+                        <option value="BOLETO">{{'jhipsterFiscalizacaoApp.TipoDocumentacao.BOLETO' | translate}}</option>
+                        <option value="RG">{{'jhipsterFiscalizacaoApp.TipoDocumentacao.RG' | translate}}</option>
+                        <option value="CPF">{{'jhipsterFiscalizacaoApp.TipoDocumentacao.CPF' | translate}}</option>
+                        <option value="CNPJ">{{'jhipsterFiscalizacaoApp.TipoDocumentacao.CNPJ' | translate}}</option>
+                        <option value="CTPS">{{'jhipsterFiscalizacaoApp.TipoDocumentacao.CTPS' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.documentacao.descricao" for="field_descricao">Descricao</label>
+                    <input type="text" class="form-control" name="descricao" id="field_descricao"
+                        [(ngModel)]="documentacao.descricao" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.documentacao.fiscalizacao" for="field_fiscalizacao">Fiscalizacao</label>
+                    <select class="form-control" id="field_fiscalizacao" name="fiscalizacao" [(ngModel)]="documentacao.fiscalizacao" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="fiscalizacaoOption.id === documentacao.fiscalizacao?.id ? documentacao.fiscalizacao : fiscalizacaoOption" *ngFor="let fiscalizacaoOption of fiscalizacaos; trackBy: trackFiscalizacaoById">{{fiscalizacaoOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

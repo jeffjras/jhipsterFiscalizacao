@@ -1,0 +1,75 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-fiscalizacao-heading" jhiTranslate="jhipsterFiscalizacaoApp.fiscalizacao.home.createOrEditLabel">Create or edit a Fiscalizacao</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!fiscalizacao.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="fiscalizacao.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.fiscalizacao.dataInicio" for="field_dataInicio">Data Inicio</label>
+                    <div class="input-group">
+                        <input id="field_dataInicio" type="text" class="form-control" name="dataInicio" ngbDatepicker  #dataInicioDp="ngbDatepicker" [(ngModel)]="fiscalizacao.dataInicio"
+                        />
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dataInicioDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.fiscalizacao.dataFim" for="field_dataFim">Data Fim</label>
+                    <div class="input-group">
+                        <input id="field_dataFim" type="text" class="form-control" name="dataFim" ngbDatepicker  #dataFimDp="ngbDatepicker" [(ngModel)]="fiscalizacao.dataFim"
+                        />
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dataFimDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.fiscalizacao.dataRegistro" for="field_dataRegistro">Data Registro</label>
+                    <div class="input-group">
+                        <input id="field_dataRegistro" type="text" class="form-control" name="dataRegistro" ngbDatepicker  #dataRegistroDp="ngbDatepicker" [(ngModel)]="fiscalizacao.dataRegistro"
+                        />
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dataRegistroDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.fiscalizacao.observacao" for="field_observacao">Observacao</label>
+                    <input type="text" class="form-control" name="observacao" id="field_observacao"
+                        [(ngModel)]="fiscalizacao.observacao" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.fiscalizacao.situacao" for="field_situacao">Situacao</label>
+                    <select class="form-control" name="situacao" [(ngModel)]="fiscalizacao.situacao" id="field_situacao" >
+                        <option value="ADIADA">{{'jhipsterFiscalizacaoApp.SituacaoFiscalizacao.ADIADA' | translate}}</option>
+                        <option value="CANCELADA">{{'jhipsterFiscalizacaoApp.SituacaoFiscalizacao.CANCELADA' | translate}}</option>
+                        <option value="CONCLUIDA">{{'jhipsterFiscalizacaoApp.SituacaoFiscalizacao.CONCLUIDA' | translate}}</option>
+                        <option value="ABERTA">{{'jhipsterFiscalizacaoApp.SituacaoFiscalizacao.ABERTA' | translate}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.fiscalizacao.operacao" for="field_operacao">Operacao</label>
+                    <select class="form-control" id="field_operacao" name="operacao" [(ngModel)]="fiscalizacao.operacao" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="operacaoOption.id === fiscalizacao.operacao?.id ? fiscalizacao.operacao : operacaoOption" *ngFor="let operacaoOption of operacaos; trackBy: trackOperacaoById">{{operacaoOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

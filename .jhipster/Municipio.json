@@ -1,0 +1,26 @@
+{
+    "name": "Municipio",
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "locais",
+            "otherEntityName": "localizacao",
+            "otherEntityRelationshipName": "municipio"
+        }
+    ],
+    "changelogDate": "20181022233207",
+    "entityTableName": "municipio",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

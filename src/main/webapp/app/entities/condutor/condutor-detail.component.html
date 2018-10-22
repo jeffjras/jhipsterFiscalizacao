@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="condutor">
+            <h2><span jhiTranslate="jhipsterFiscalizacaoApp.condutor.detail.title">Condutor</span> {{condutor.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.condutor.nome">Nome</span></dt>
+                <dd>
+                    <span>{{condutor.nome}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.condutor.endereco">Endereco</span></dt>
+                <dd>
+                    <span>{{condutor.endereco}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.condutor.telefone">Telefone</span></dt>
+                <dd>
+                    <span>{{condutor.telefone}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.condutor.fiscalizacao">Fiscalizacao</span></dt>
+                <dd>
+                    <div *ngIf="condutor.fiscalizacao">
+                        <a [routerLink]="['/fiscalizacao', condutor.fiscalizacao?.id, 'view']">{{condutor.fiscalizacao?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/condutor', condutor.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

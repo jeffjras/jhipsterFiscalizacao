@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="fiscalizacao">
+            <h2><span jhiTranslate="jhipsterFiscalizacaoApp.fiscalizacao.detail.title">Fiscalizacao</span> {{fiscalizacao.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.fiscalizacao.dataInicio">Data Inicio</span></dt>
+                <dd>
+                    <span>{{fiscalizacao.dataInicio}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.fiscalizacao.dataFim">Data Fim</span></dt>
+                <dd>
+                    <span>{{fiscalizacao.dataFim}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.fiscalizacao.dataRegistro">Data Registro</span></dt>
+                <dd>
+                    <span>{{fiscalizacao.dataRegistro}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.fiscalizacao.observacao">Observacao</span></dt>
+                <dd>
+                    <span>{{fiscalizacao.observacao}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.fiscalizacao.situacao">Situacao</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'jhipsterFiscalizacaoApp.SituacaoFiscalizacao.' + fiscalizacao.situacao}}">{{fiscalizacao.situacao}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.fiscalizacao.operacao">Operacao</span></dt>
+                <dd>
+                    <div *ngIf="fiscalizacao.operacao">
+                        <a [routerLink]="['/operacao', fiscalizacao.operacao?.id, 'view']">{{fiscalizacao.operacao?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/fiscalizacao', fiscalizacao.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

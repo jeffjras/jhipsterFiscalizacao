@@ -1,0 +1,61 @@
+{
+    "name": "Operacao",
+    "fields": [
+        {
+            "fieldName": "data",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "StatusOperacao",
+            "fieldValues": "ABERTA,PENDENTE,CANCELADA,CONCLUIDA"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "fiscalizacoes",
+            "otherEntityName": "fiscalizacao",
+            "otherEntityRelationshipName": "operacao"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "locais",
+            "otherEntityName": "localizacao",
+            "otherEntityRelationshipName": "operacao"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "equipamentos",
+            "otherEntityName": "equipamento",
+            "otherEntityRelationshipName": "operacao"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "departamentos",
+            "otherEntityName": "departamento",
+            "otherEntityRelationshipName": "operacao"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "veiculos",
+            "otherEntityName": "veiculo",
+            "otherEntityRelationshipName": "operacao"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "orgao",
+            "otherEntityName": "orgao",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181022233205",
+    "entityTableName": "operacao",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,74 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-veiculo-heading" jhiTranslate="jhipsterFiscalizacaoApp.veiculo.home.createOrEditLabel">Create or edit a Veiculo</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!veiculo.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="veiculo.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.veiculo.marca" for="field_marca">Marca</label>
+                    <input type="text" class="form-control" name="marca" id="field_marca"
+                        [(ngModel)]="veiculo.marca" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.veiculo.modelo" for="field_modelo">Modelo</label>
+                    <input type="text" class="form-control" name="modelo" id="field_modelo"
+                        [(ngModel)]="veiculo.modelo" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.veiculo.placa" for="field_placa">Placa</label>
+                    <input type="text" class="form-control" name="placa" id="field_placa"
+                        [(ngModel)]="veiculo.placa" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.veiculo.chassi" for="field_chassi">Chassi</label>
+                    <input type="text" class="form-control" name="chassi" id="field_chassi"
+                        [(ngModel)]="veiculo.chassi" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.veiculo.ano" for="field_ano">Ano</label>
+                    <input type="number" class="form-control" name="ano" id="field_ano"
+                        [(ngModel)]="veiculo.ano" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.veiculo.tipo" for="field_tipo">Tipo</label>
+                    <select class="form-control" name="tipo" [(ngModel)]="veiculo.tipo" id="field_tipo" >
+                        <option value="CARRO">{{'jhipsterFiscalizacaoApp.TipoVeiculo.CARRO' | translate}}</option>
+                        <option value="MOTO">{{'jhipsterFiscalizacaoApp.TipoVeiculo.MOTO' | translate}}</option>
+                        <option value="PICKUP">{{'jhipsterFiscalizacaoApp.TipoVeiculo.PICKUP' | translate}}</option>
+                        <option value="CAMINHAO">{{'jhipsterFiscalizacaoApp.TipoVeiculo.CAMINHAO' | translate}}</option>
+                        <option value="ONIBUS">{{'jhipsterFiscalizacaoApp.TipoVeiculo.ONIBUS' | translate}}</option>
+                        <option value="TRICICLO">{{'jhipsterFiscalizacaoApp.TipoVeiculo.TRICICLO' | translate}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.veiculo.fiscalizacao" for="field_fiscalizacao">Fiscalizacao</label>
+                    <select class="form-control" id="field_fiscalizacao" name="fiscalizacao" [(ngModel)]="veiculo.fiscalizacao" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="fiscalizacaoOption.id === veiculo.fiscalizacao?.id ? veiculo.fiscalizacao : fiscalizacaoOption" *ngFor="let fiscalizacaoOption of fiscalizacaos; trackBy: trackFiscalizacaoById">{{fiscalizacaoOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.veiculo.operacao" for="field_operacao">Operacao</label>
+                    <select class="form-control" id="field_operacao" name="operacao" [(ngModel)]="veiculo.operacao" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="operacaoOption.id === veiculo.operacao?.id ? veiculo.operacao : operacaoOption" *ngFor="let operacaoOption of operacaos; trackBy: trackOperacaoById">{{operacaoOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
