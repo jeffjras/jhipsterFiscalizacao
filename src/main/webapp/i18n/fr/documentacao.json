@@ -1,0 +1,24 @@
+
+{
+    "jhipsterFiscalizacaoApp": {
+        "documentacao" : {
+            "home": {
+                "title": "Documentacaos",
+                "createLabel": "Créer un nouveau Documentacao",
+                "createOrEditLabel": "Créer ou éditer un Documentacao"
+            },
+            "created": "Un nouveau Documentacao a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Documentacao avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Documentacao avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Documentacao {{ id }} ?"
+            },
+            "detail": {
+                "title": "Documentacao"
+            },
+            "tipo": "Tipo",
+            "descricao": "Descricao",
+            "fiscalizacao": "Fiscalizacao"
+        }
+    }
+}

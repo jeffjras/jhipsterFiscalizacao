@@ -1,0 +1,25 @@
+
+{
+    "jhipsterFiscalizacaoApp": {
+        "condutor" : {
+            "home": {
+                "title": "Condutors",
+                "createLabel": "Criar novo Condutor",
+                "createOrEditLabel": "Criar ou editar Condutor"
+            },
+            "created": "Um novo Condutor foi criado com o identificador {{ param }}",
+            "updated": "Um Condutor foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Condutor foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Condutor {{ id }}?"
+            },
+            "detail": {
+                "title": "Condutor"
+            },
+            "nome": "Nome",
+            "endereco": "Endereco",
+            "telefone": "Telefone",
+            "fiscalizacao": "Fiscalizacao"
+        }
+    }
+}

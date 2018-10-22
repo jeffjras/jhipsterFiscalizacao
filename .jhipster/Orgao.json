@@ -1,0 +1,34 @@
+{
+    "name": "Orgao",
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "endereco",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telefone",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "operacoes",
+            "otherEntityName": "operacao",
+            "otherEntityRelationshipName": "orgao"
+        }
+    ],
+    "changelogDate": "20181022233200",
+    "entityTableName": "orgao",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,46 @@
+{
+    "name": "Localizacao",
+    "fields": [
+        {
+            "fieldName": "bairro",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "logradouro",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "perimetro",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "operacao",
+            "otherEntityName": "operacao",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "fiscalizacao",
+            "otherEntityName": "fiscalizacao",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "municipio",
+            "otherEntityName": "municipio",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181022233208",
+    "entityTableName": "localizacao",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

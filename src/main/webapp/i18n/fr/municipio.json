@@ -1,0 +1,23 @@
+
+{
+    "jhipsterFiscalizacaoApp": {
+        "municipio" : {
+            "home": {
+                "title": "Municipios",
+                "createLabel": "Créer un nouveau Municipio",
+                "createOrEditLabel": "Créer ou éditer un Municipio"
+            },
+            "created": "Un nouveau Municipio a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Municipio avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Municipio avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Municipio {{ id }} ?"
+            },
+            "detail": {
+                "title": "Municipio"
+            },
+            "nome": "Nome",
+            "locais": "Locais"
+        }
+    }
+}

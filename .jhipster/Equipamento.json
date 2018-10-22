@@ -1,0 +1,35 @@
+{
+    "name": "Equipamento",
+    "fields": [
+        {
+            "fieldName": "descricao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tipo",
+            "fieldType": "TipoEquipamento",
+            "fieldValues": "VESTUARIO,SEGURANCA,VEICULAR,OUTROS"
+        },
+        {
+            "fieldName": "dataEntrada",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "operacao",
+            "otherEntityName": "operacao",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181022233204",
+    "entityTableName": "equipamento",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

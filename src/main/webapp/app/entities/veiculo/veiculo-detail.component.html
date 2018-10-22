@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="veiculo">
+            <h2><span jhiTranslate="jhipsterFiscalizacaoApp.veiculo.detail.title">Veiculo</span> {{veiculo.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.veiculo.marca">Marca</span></dt>
+                <dd>
+                    <span>{{veiculo.marca}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.veiculo.modelo">Modelo</span></dt>
+                <dd>
+                    <span>{{veiculo.modelo}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.veiculo.placa">Placa</span></dt>
+                <dd>
+                    <span>{{veiculo.placa}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.veiculo.chassi">Chassi</span></dt>
+                <dd>
+                    <span>{{veiculo.chassi}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.veiculo.ano">Ano</span></dt>
+                <dd>
+                    <span>{{veiculo.ano}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.veiculo.tipo">Tipo</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'jhipsterFiscalizacaoApp.TipoVeiculo.' + veiculo.tipo}}">{{veiculo.tipo}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.veiculo.fiscalizacao">Fiscalizacao</span></dt>
+                <dd>
+                    <div *ngIf="veiculo.fiscalizacao">
+                        <a [routerLink]="['/fiscalizacao', veiculo.fiscalizacao?.id, 'view']">{{veiculo.fiscalizacao?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.veiculo.operacao">Operacao</span></dt>
+                <dd>
+                    <div *ngIf="veiculo.operacao">
+                        <a [routerLink]="['/operacao', veiculo.operacao?.id, 'view']">{{veiculo.operacao?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/veiculo', veiculo.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

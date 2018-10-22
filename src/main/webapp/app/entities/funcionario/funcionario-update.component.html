@@ -1,0 +1,84 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-funcionario-heading" jhiTranslate="jhipsterFiscalizacaoApp.funcionario.home.createOrEditLabel">Create or edit a Funcionario</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!funcionario.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="funcionario.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.funcionario.nome" for="field_nome">Nome</label>
+                    <input type="text" class="form-control" name="nome" id="field_nome"
+                        [(ngModel)]="funcionario.nome" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.funcionario.endereco" for="field_endereco">Endereco</label>
+                    <input type="text" class="form-control" name="endereco" id="field_endereco"
+                        [(ngModel)]="funcionario.endereco" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.funcionario.telefone" for="field_telefone">Telefone</label>
+                    <input type="text" class="form-control" name="telefone" id="field_telefone"
+                        [(ngModel)]="funcionario.telefone" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.funcionario.numVeiculoAbordado" for="field_numVeiculoAbordado">Num Veiculo Abordado</label>
+                    <input type="number" class="form-control" name="numVeiculoAbordado" id="field_numVeiculoAbordado"
+                        [(ngModel)]="funcionario.numVeiculoAbordado" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.funcionario.numDocApreendido" for="field_numDocApreendido">Num Doc Apreendido</label>
+                    <input type="number" class="form-control" name="numDocApreendido" id="field_numDocApreendido"
+                        [(ngModel)]="funcionario.numDocApreendido" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.funcionario.supervisor" for="field_supervisor">Supervisor</label>
+                    <select class="form-control" id="field_supervisor" name="supervisor" [(ngModel)]="funcionario.supervisor" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="funcionarioOption.id === funcionario.supervisor?.id ? funcionario.supervisor : funcionarioOption" *ngFor="let funcionarioOption of funcionarios; trackBy: trackFuncionarioById">{{funcionarioOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.funcionario.chefe" for="field_chefe">Chefe</label>
+                    <select class="form-control" id="field_chefe" name="chefe" [(ngModel)]="funcionario.chefe" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="funcionarioOption.id === funcionario.chefe?.id ? funcionario.chefe : funcionarioOption" *ngFor="let funcionarioOption of funcionarios; trackBy: trackFuncionarioById">{{funcionarioOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.funcionario.gerente" for="field_gerente">Gerente</label>
+                    <select class="form-control" id="field_gerente" name="gerente" [(ngModel)]="funcionario.gerente" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="funcionarioOption.id === funcionario.gerente?.id ? funcionario.gerente : funcionarioOption" *ngFor="let funcionarioOption of funcionarios; trackBy: trackFuncionarioById">{{funcionarioOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.funcionario.departamento" for="field_departamento">Departamento</label>
+                    <select class="form-control" id="field_departamento" name="departamento" [(ngModel)]="funcionario.departamento" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="departamentoOption.id === funcionario.departamento?.id ? funcionario.departamento : departamentoOption" *ngFor="let departamentoOption of departamentos; trackBy: trackDepartamentoById">{{departamentoOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterFiscalizacaoApp.funcionario.cargo" for="field_cargo">Cargo</label>
+                    <select class="form-control" id="field_cargo" name="cargo" [(ngModel)]="funcionario.cargo" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="cargoOption.id === funcionario.cargo?.id ? funcionario.cargo : cargoOption" *ngFor="let cargoOption of cargos; trackBy: trackCargoById">{{cargoOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

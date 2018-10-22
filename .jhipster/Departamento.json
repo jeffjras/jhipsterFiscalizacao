@@ -1,0 +1,32 @@
+{
+    "name": "Departamento",
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "agentes",
+            "otherEntityName": "funcionario",
+            "otherEntityRelationshipName": "departamento"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "operacao",
+            "otherEntityName": "operacao",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181022233203",
+    "entityTableName": "departamento",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

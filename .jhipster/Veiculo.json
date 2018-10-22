@@ -1,0 +1,53 @@
+{
+    "name": "Veiculo",
+    "fields": [
+        {
+            "fieldName": "marca",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modelo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "placa",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "chassi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ano",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "tipo",
+            "fieldType": "TipoVeiculo",
+            "fieldValues": "CARRO,MOTO,PICKUP,CAMINHAO,ONIBUS,TRICICLO"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "fiscalizacao",
+            "otherEntityName": "fiscalizacao",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "operacao",
+            "otherEntityName": "operacao",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181022233211",
+    "entityTableName": "veiculo",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

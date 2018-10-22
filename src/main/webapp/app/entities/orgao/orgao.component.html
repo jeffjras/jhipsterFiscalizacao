@@ -1,0 +1,58 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="jhipsterFiscalizacaoApp.orgao.home.title">Orgaos</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-orgao" [routerLink]="['/orgao/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="jhipsterFiscalizacaoApp.orgao.home.createLabel">
+            Create new Orgao
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="orgaos">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="jhipsterFiscalizacaoApp.orgao.nome">Nome</span></th>
+            <th><span jhiTranslate="jhipsterFiscalizacaoApp.orgao.endereco">Endereco</span></th>
+            <th><span jhiTranslate="jhipsterFiscalizacaoApp.orgao.telefone">Telefone</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let orgao of orgaos ;trackBy: trackId">
+                <td><a [routerLink]="['/orgao', orgao.id, 'view' ]">{{orgao.id}}</a></td>
+                <td>{{orgao.nome}}</td>
+                <td>{{orgao.endereco}}</td>
+                <td>{{orgao.telefone}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/orgao', orgao.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/orgao', orgao.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'orgao/'+ orgao.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

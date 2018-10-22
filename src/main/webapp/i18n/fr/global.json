@@ -7,6 +7,18 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entités",
+                "orgao": "Orgao",
+                "funcionario": "Funcionario",
+                "cargo": "Cargo",
+                "departamento": "Departamento",
+                "equipamento": "Equipamento",
+                "operacao": "Operacao",
+                "fiscalizacao": "Fiscalizacao",
+                "municipio": "Municipio",
+                "localizacao": "Localizacao",
+                "documentacao": "Documentacao",
+                "condutor": "Condutor",
+                "veiculo": "Veiculo",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

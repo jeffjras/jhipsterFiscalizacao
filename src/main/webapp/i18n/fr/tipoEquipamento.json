@@ -1,0 +1,11 @@
+{
+    "jhipsterFiscalizacaoApp": {
+        "TipoEquipamento" : {
+            "null": "",
+            "VESTUARIO": "VESTUARIO",
+            "SEGURANCA": "SEGURANCA",
+            "VEICULAR": "VEICULAR",
+            "OUTROS": "OUTROS"
+        }
+    }
+}

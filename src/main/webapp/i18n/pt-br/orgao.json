@@ -1,0 +1,25 @@
+
+{
+    "jhipsterFiscalizacaoApp": {
+        "orgao" : {
+            "home": {
+                "title": "Orgaos",
+                "createLabel": "Criar novo Orgao",
+                "createOrEditLabel": "Criar ou editar Orgao"
+            },
+            "created": "Um novo Orgao foi criado com o identificador {{ param }}",
+            "updated": "Um Orgao foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Orgao foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Orgao {{ id }}?"
+            },
+            "detail": {
+                "title": "Orgao"
+            },
+            "nome": "Nome",
+            "endereco": "Endereco",
+            "telefone": "Telefone",
+            "operacoes": "Operacoes"
+        }
+    }
+}

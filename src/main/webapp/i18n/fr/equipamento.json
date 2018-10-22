@@ -1,0 +1,25 @@
+
+{
+    "jhipsterFiscalizacaoApp": {
+        "equipamento" : {
+            "home": {
+                "title": "Equipamentos",
+                "createLabel": "Créer un nouveau Equipamento",
+                "createOrEditLabel": "Créer ou éditer un Equipamento"
+            },
+            "created": "Un nouveau Equipamento a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Equipamento avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Equipamento avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Equipamento {{ id }} ?"
+            },
+            "detail": {
+                "title": "Equipamento"
+            },
+            "descricao": "Descricao",
+            "tipo": "Tipo",
+            "dataEntrada": "Data Entrada",
+            "operacao": "Operacao"
+        }
+    }
+}

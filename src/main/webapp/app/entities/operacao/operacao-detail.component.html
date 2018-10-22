@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="operacao">
+            <h2><span jhiTranslate="jhipsterFiscalizacaoApp.operacao.detail.title">Operacao</span> {{operacao.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.operacao.data">Data</span></dt>
+                <dd>
+                    <span>{{operacao.data}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.operacao.status">Status</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'jhipsterFiscalizacaoApp.StatusOperacao.' + operacao.status}}">{{operacao.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterFiscalizacaoApp.operacao.orgao">Orgao</span></dt>
+                <dd>
+                    <div *ngIf="operacao.orgao">
+                        <a [routerLink]="['/orgao', operacao.orgao?.id, 'view']">{{operacao.orgao?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/operacao', operacao.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
